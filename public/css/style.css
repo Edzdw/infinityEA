@@ -1263,7 +1263,7 @@ header .mobile-menu {
   background-attachment: fixed;
   position: relative;
   background-position: center;
-  display: none;
+  display: flex;
 }
 
 .clients:before {
