@@ -107,36 +107,6 @@ const Blog = () => {
         </div>
         {/* POST ITEM ENDS */}
 
-        {/* POST ITEM STARTS */}
-        <div className="animated-layer fade-in-right-animation fadeInUp wow">
-          <Link href="/blog-post4" legacyBehavior>
-            <a>
-              <span className="img-holder">
-                <img src="assets/blog/blog-post-1.jpg" alt="" />
-              </span>
-              <div className="content">
-                <span className="title">
-                  Huớng dẫn thiết lập quyền tài khoản Exness
-                </span>
-                <p>
-                  Hướng dẫn thiết lập quyền chỉ xem tài khoản giao dịch Exness
-                </p>
-                <div className="meta d-flex align-items-center">
-                  <div className="d-flex align-items-center">
-                    <i className="fa-regular fa-calendar" />
-                    <span>9 Jun 2023</span>
-                  </div>
-                  <div className="d-flex align-items-center">
-                    <i className="fa-regular fa-comments" />
-                    <span>17 comments</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </Link>
-        </div>
-        {/* POST ITEM ENDS */}
-
 
       </div>
       {/* LATEST POSTS ENDS */}
