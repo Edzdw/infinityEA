@@ -1255,7 +1255,7 @@ header .mobile-menu {
   transform: translateX(calc(100% + 150px));
 }
 
-/*** CLIENTS SECTION ***/
+/* ** CLIENTS SECTION **
 
 .clients {
   background-image: url(../assets/backgrounds/clients.jpg);
@@ -1340,7 +1340,7 @@ header .mobile-menu {
 .clients .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 35px;
   border-radius: 6px;
-}
+} */
 
 /*** TESTIMONIALS SECTION ***/
 
