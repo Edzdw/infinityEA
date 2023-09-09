@@ -49,7 +49,7 @@ export const jqueryFuntion = () => {
     var contactwidth =
       portfoliowidth + $(".contact").width() + $(".testimonials").width() - 10;
     var blogwidth =
-      contactwidth + $(".blog").width() + $(".copyright").width() - 10;
+      contactwidth + $(".blog").width() + $(".network").width() - 10;
 
     /* ----------------------------------------------------------- */
     /*  HORIZONTAL SCROLL & REVEAL ANIMATIONS
