@@ -44,7 +44,7 @@ export const jqueryFuntion = () => {
       250 +
       65 +
       300 +
-      $(".clients").width() -
+      $(".contact").width() -
       10;
     var contactwidth =
       portfoliowidth + $(".contact").width() + $(".testimonials").width() - 10;
