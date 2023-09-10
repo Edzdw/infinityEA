@@ -112,14 +112,14 @@ export const jqueryFuntion = () => {
         $(".menu ul li span").removeClass("active");
         $("#contact-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > contactwidth &&
+        Math.abs(parseInt($(".mCSB_container").css("left"))) + 100 > contactwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < blogwidth
       ) {
         $(".menu ul li span").removeClass("active");
         $("#blog-link").addClass("active");
 
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > blogwidth &&
+        Math.abs(parseInt($(".mCSB_container").css("left"))) + Math.abs(parseInt($(".mCSB_container").css("left"))) * 10/100 > blogwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < networkwidth
       ) {
         $(".menu ul li span").removeClass("active");
