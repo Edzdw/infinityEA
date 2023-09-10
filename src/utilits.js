@@ -125,11 +125,11 @@ export const jqueryFuntion = () => {
         $("#blog-link").addClass("active");
 
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) + Math.abs(parseInt($(".mCSB_container").css("left"))) * 10/100 > blogwidth &&
+        Math.abs(parseInt($(".mCSB_container").css("left"))) + 1200 > blogwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < networkwidth
       ) {
-        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))) + Math.abs(parseInt($(".mCSB_container").css("left"))) * 10/100,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
-
+        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))) + 1200,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
+        console.log(Math.abs(parseInt($(".mCSB_container").css("left"))));
         $(".menu ul li span").removeClass("active");
         $("#blog-link").addClass("active");
 
