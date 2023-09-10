@@ -92,44 +92,37 @@ export const jqueryFuntion = () => {
     }
 
     function checkScroll() {
+      var currentScreenWidth = Math.abs(parseInt($(".mCSB_container").css("left")));
       if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > homewidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < aboutwidth
+        currentScreenWidth > homewidth &&
+        currentScreenWidth < aboutwidth
       ) {
-        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
         $(".menu ul li span").removeClass("active");
         $("#about-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > aboutwidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < portfoliowidth
+        currentScreenWidth > aboutwidth &&
+        currentScreenWidth < portfoliowidth
       ) {
-        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
-
         $(".menu ul li span").removeClass("active");
         $("#portfolio-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > portfoliowidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < contactwidth
+        currentScreenWidth > portfoliowidth &&
+        currentScreenWidth < contactwidth
       ) {
-        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
-
         $(".menu ul li span").removeClass("active");
         $("#contact-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) + 100 > contactwidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < blogwidth
+        currentScreenWidth  > contactwidth &&
+        currentScreenWidth < blogwidth
       ) {
-        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))) + 100,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
-
         $(".menu ul li span").removeClass("active");
         $("#blog-link").addClass("active");
 
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > 13000 &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < networkwidth
+        currentScreenWidth > blogwidth &&
+        currentScreenWidth < networkwidth
       ) {
-        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))) + 2200,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
-        console.log(">> " + Math.abs(parseInt($(".mCSB_container").css("left"))));
+        console.log({"1 Current": currentScreenWidth ,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
         $(".menu ul li span").removeClass("active");
         $("#network-link").addClass("active");
 
