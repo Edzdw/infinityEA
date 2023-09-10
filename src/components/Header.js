@@ -2,6 +2,7 @@ import React from "react";
 import Signin from "./Signin";
 import LinkRef from "./LinkRef";
 import Axios from "axios";
+import { normalAlert } from "./Swal";
 
 const Header = () => {
   const [isSignInModalOpen, setIsSignInModalOpen] = React.useState(false);
@@ -46,6 +47,8 @@ const Header = () => {
         if (response.data == 1) {
           toggleLinkRefModal();
         }
+      }).catch((error) => {
+        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
       });
   }, [email]);
 

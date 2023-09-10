@@ -55,6 +55,8 @@ function Signup({ isOpen, toggle }) {
           normalAlert("Email đã tồn tại trong hệ thống, vui lòng thử lại!", "error");
         } else if (error.response.status == 402) {
           normalAlert("Người giới thiệu không tồn tại trong hệ thống, vui lòng thử lại!", "error");
+        } else {
+          normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         }
       });
 

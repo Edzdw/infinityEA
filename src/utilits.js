@@ -112,7 +112,7 @@ export const jqueryFuntion = () => {
         $(".menu ul li span").removeClass("active");
         $("#contact-link").addClass("active");
       } else if (
-        currentScreenWidth  > contactwidth &&
+        currentScreenWidth > contactwidth &&
         currentScreenWidth < blogwidth
       ) {
         $(".menu ul li span").removeClass("active");
@@ -121,7 +121,6 @@ export const jqueryFuntion = () => {
         currentScreenWidth > blogwidth &&
         currentScreenWidth < networkwidth
       ) {
-        console.log({"1 Current": currentScreenWidth ,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
         $(".menu ul li span").removeClass("active");
         $("#network-link").addClass("active");
       }else {
@@ -219,54 +218,36 @@ export const jqueryFuntion = () => {
       $("#wrapper").mCustomScrollbar("scrollTo", "#home", {
         scrollInertia: 1500,
       });
-
-      $(".menu ul li span").removeClass("active");
-      $("#home-link").addClass("active");
     });
 
     $("#about-link").on("click", function () {
       $("#wrapper").mCustomScrollbar("scrollTo", "#about", {
         scrollInertia: 1500,
       });
-
-      $(".menu ul li span").removeClass("active");
-        $("#about-link").addClass("active");
     });
 
     $("#portfolio-link").on("click", function () {
       $("#wrapper").mCustomScrollbar("scrollTo", "#portfolio", {
         scrollInertia: 1500,
       });
-
-      $(".menu ul li span").removeClass("active");
-        $("#portfolio-link").addClass("active");
     });
 
     $("#contact-link").on("click", function () {
       $("#wrapper").mCustomScrollbar("scrollTo", "#contact", {
         scrollInertia: 1500,
       });
-
-      $(".menu ul li span").removeClass("active");
-        $("#contact-link").addClass("active");
     });
 
     $("#blog-link").on("click", function () {
       $("#wrapper").mCustomScrollbar("scrollTo", "#blog", {
         scrollInertia: 1500,
       });
-
-      $(".menu ul li span").removeClass("active");
-        $("#blog-link").addClass("active");
     });
 
     $("#network-link").on("click", function () {
       $("#wrapper").mCustomScrollbar("scrollTo", "#network", {
         scrollInertia: 1500,
       });
-
-      $(".menu ul li span").removeClass("active");
-        $("#network-link").addClass("active");
     });
 
     $("#menu li a").on("click", function () {
