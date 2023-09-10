@@ -112,7 +112,7 @@ export const jqueryFuntion = () => {
         $(".menu ul li span").removeClass("active");
         $("#contact-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > contactwidth &&
+        Math.abs(parseInt($(".mCSB_container").css("left"))) + Math.abs(parseInt($(".mCSB_container").css("left")))*10/100> contactwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < networkwidth
       ) {
         $(".menu ul li span").removeClass("active");
