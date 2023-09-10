@@ -51,7 +51,7 @@ export const jqueryFuntion = () => {
     var blogwidth =
       contactwidth + $(".blog").width() + $(".network").width() - 10;
     var networkwidth =
-    blogwidth + $(".network").width() + $(".copyright").width();
+    blogwidth + $(".network").width() + $(".copyright").width() - 10;
 
     /* ----------------------------------------------------------- */
     /*  HORIZONTAL SCROLL & REVEAL ANIMATIONS
@@ -93,7 +93,7 @@ export const jqueryFuntion = () => {
     }
 
     function checkScroll() {
-      console.log({"Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"Home": homewidth, "About": aboutwidth, "Portfolio": portfoliowidth, "Contact": contactwidth, "Blog": blogwidth, "Network": networkwidth});
+      console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
       if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) > homewidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < aboutwidth

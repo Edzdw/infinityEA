@@ -4,7 +4,6 @@ import LinkRef from "./LinkRef";
 import Axios from "axios";
 
 const Header = () => {
-  console.log(">>>> test");
   const [isSignInModalOpen, setIsSignInModalOpen] = React.useState(false);
   const [isLinkRefModalOpen, setIsLinkRefModalOpen] = React.useState(false);
 
