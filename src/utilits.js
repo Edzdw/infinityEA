@@ -92,29 +92,35 @@ export const jqueryFuntion = () => {
     }
 
     function checkScroll() {
-      console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
       if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) > homewidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < aboutwidth
       ) {
+        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
         $(".menu ul li span").removeClass("active");
         $("#about-link").addClass("active");
       } else if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) > aboutwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < portfoliowidth
       ) {
+        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
+
         $(".menu ul li span").removeClass("active");
         $("#portfolio-link").addClass("active");
       } else if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) > portfoliowidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < contactwidth
       ) {
+        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))),"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
+
         $(".menu ul li span").removeClass("active");
         $("#contact-link").addClass("active");
       } else if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) + 100 > contactwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < blogwidth
       ) {
+        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))) + 100,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
+
         $(".menu ul li span").removeClass("active");
         $("#blog-link").addClass("active");
 
@@ -122,6 +128,8 @@ export const jqueryFuntion = () => {
         Math.abs(parseInt($(".mCSB_container").css("left"))) + Math.abs(parseInt($(".mCSB_container").css("left"))) * 10/100 > blogwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < networkwidth
       ) {
+        console.log({"1 Current": Math.abs(parseInt($(".mCSB_container").css("left"))) + Math.abs(parseInt($(".mCSB_container").css("left"))) * 10/100,"2 Home": homewidth, "3 About": aboutwidth, "4 Portfolio": portfoliowidth, "5 Contact": contactwidth, "6 Blog": blogwidth, "7 Network": networkwidth});
+
         $(".menu ul li span").removeClass("active");
         $("#blog-link").addClass("active");
 
