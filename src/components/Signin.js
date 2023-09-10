@@ -19,11 +19,10 @@ function Signin({ isOpen, toggle }) {
     if (email === "" || password === "") {
       normalAlert("Vui lòng nhập id và mật khẩu để đăng nhập!", "error");
       return;
+    } else if (!isValidEmail(email)) {
+      normalAlert("Email không hợp lệ, vui lòng thử lại!", "error");
+      return;
     }
-    // else if (!isValidEmail(email)) {
-    //   normalAlert("Email không hợp lệ, vui lòng thử lại!", "error");
-    //   return;
-    // }
 
     let data = JSON.stringify({
       "email": email,

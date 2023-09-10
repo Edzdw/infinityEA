@@ -43,13 +43,14 @@ export const jqueryFuntion = () => {
       $(".portfolio .single-item .details").width() +
       250 +
       65 +
-      300 +
-      $(".contact").width() -
+      300 -
       10;
     var contactwidth =
       portfoliowidth + $(".contact").width() + $(".testimonials").width() - 10;
     var blogwidth =
       contactwidth + $(".blog").width() + $(".network").width() - 10;
+    var networkwidth =
+    blogwidth + $(".network").width() + $(".copyright").width() - 10;
 
     /* ----------------------------------------------------------- */
     /*  HORIZONTAL SCROLL & REVEAL ANIMATIONS
@@ -91,32 +92,38 @@ export const jqueryFuntion = () => {
     }
 
     function checkScroll() {
+      var currentScreenWidth = Math.abs(parseInt($(".mCSB_container").css("left")));
       if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > homewidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < aboutwidth
+        currentScreenWidth > homewidth &&
+        currentScreenWidth < aboutwidth
       ) {
         $(".menu ul li span").removeClass("active");
         $("#about-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > aboutwidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < portfoliowidth
+        currentScreenWidth > aboutwidth &&
+        currentScreenWidth < portfoliowidth
       ) {
         $(".menu ul li span").removeClass("active");
         $("#portfolio-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > portfoliowidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < contactwidth
+        currentScreenWidth > portfoliowidth &&
+        currentScreenWidth < contactwidth
       ) {
         $(".menu ul li span").removeClass("active");
         $("#contact-link").addClass("active");
       } else if (
-        Math.abs(parseInt($(".mCSB_container").css("left"))) > contactwidth &&
-        Math.abs(parseInt($(".mCSB_container").css("left"))) < blogwidth
+        currentScreenWidth > contactwidth &&
+        currentScreenWidth < blogwidth
       ) {
         $(".menu ul li span").removeClass("active");
         $("#blog-link").addClass("active");
-
-      } else {
+      } else if (
+        currentScreenWidth > blogwidth &&
+        currentScreenWidth < networkwidth
+      ) {
+        $(".menu ul li span").removeClass("active");
+        $("#network-link").addClass("active");
+      }else {
         $(".menu ul li span").removeClass("active");
         $("#home-link").addClass("active");
       }
@@ -174,8 +181,8 @@ export const jqueryFuntion = () => {
         "",
         document.title,
         window.location.origin +
-          window.location.pathname +
-          window.location.search
+        window.location.pathname +
+        window.location.search
       );
     }
 
@@ -236,7 +243,7 @@ export const jqueryFuntion = () => {
         scrollInertia: 1500,
       });
     });
-    
+
     $("#network-link").on("click", function () {
       $("#wrapper").mCustomScrollbar("scrollTo", "#network", {
         scrollInertia: 1500,

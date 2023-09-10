@@ -68,7 +68,7 @@ const About = () => {
     if (localStorage.getItem("email")) {
       let config = {
         method: 'get',
-        url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/test/${localStorage.getItem("email")}`
+        url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/test/${encodeURI(localStorage.getItem("email"))}`
       };
 
       Axios.request(config)
@@ -76,7 +76,7 @@ const About = () => {
           setNetworks(response.data);
         })
         .catch((error) => {
-          normalAlert("Lỗi, xin vui lòng đăng nhập lại!", "error");
+          normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         });
     } else {
       return;
@@ -85,8 +85,8 @@ const About = () => {
 
   return (
     <section
-      className="portfolio main-section flex-column-mobile"
-      id="portfolio"
+      className="portfolio network main-section flex-column-mobile"
+      id="network"
     >
       {/* TITLE STARTS */}
       <div className="custom-title">
