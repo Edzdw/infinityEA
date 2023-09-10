@@ -1765,6 +1765,19 @@ header .mobile-menu {
   text-decoration: overline;
 }
 
+.network-title {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  padding-bottom: 3%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-bottom: gold 3px solid;
+}
+
+
+
 /* [ RESPONSIVE ] */
 /*================================================== */
 

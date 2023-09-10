@@ -110,10 +110,10 @@ const About = () => {
         <SwiperSlide className="single-item swiper-slide">
           {/* ITEM MAIN CONTENT STARTS */}
           <div className="main-content">
-            <ul> <h3>Danh sách F1</h3>
+            <ul> <h3 class = 'network-title'>Danh sách F1</h3>
               {Array.isArray(networks.F1) && networks.F1.length > 0 ? (
                 <>
-                  <ul class='network-title' style={{ listStyleType: "none", paddingLeft: 0 }}>
+                  <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
                     {visibleItemsF1.map((item, id) => (
                       <li key={id} style={{ paddingLeft: "20px" }}>{startIndex1 + id + 1} - {item}</li>
                     ))}
