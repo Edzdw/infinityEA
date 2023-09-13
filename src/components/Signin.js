@@ -89,10 +89,11 @@ function Signin({ isOpen, toggle }) {
 
           </div>
 
-          <Button color="primary" type="button" onClick={handleSignin}>
-            Sign In
+          <Button class = "modal-btn" color="primary" type="button" onClick={handleSignin}>
+             <span> Sign In </span>
           </Button>
         </ModalBody>
+
         <ModalFooter style={{ color: "black" }}>
           <i>Chưa có tài khoản? Nhấn vào <span style={{ color: "blue", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để đăng ký</i>
         </ModalFooter>
