@@ -52,25 +52,6 @@ const Index = () => {
             </>}
             <Copyright />
 
-            {/* <Home />
-            <Separator type={"up"} />
-            <About />
-            <Separator type={"down"} />
-            <Facts />
-            <Separator type={"up"} />
-            <Portfolio />
-            <Separator type={"down"} />
-            <Testimonials />
-            <Separator type={"up"} />
-            <Contact />
-            <Separator type={"down"} />
-            <Blog />
-            <Separator type={"up"} />
-            {email && <>
-              <Network />
-              <Separator type={"down"} /> 
-            </>}
-            <Copyright /> */}
           </main>
         </div>
         <ScrollBar />
