@@ -1871,7 +1871,7 @@ header .mobile-menu {
 
 /* MODAL-BTN */
 
-.modal-btn {
+.btn-primary {
   position: relative;
   font-family: inherit;
   font-weight: 500;
@@ -1885,7 +1885,7 @@ header .mobile-menu {
 }
 
 
-.cssbuttons-io span {
+.btn-primary span {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
@@ -1894,8 +1894,8 @@ header .mobile-menu {
   padding: 0.8em 1.2em 0.8em 1.05em;
 }
 
-.modal-btn::before,
-.modal-btn::after {
+.btn-primary::before,
+.btn-primary::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -1904,7 +1904,7 @@ header .mobile-menu {
   z-index: 0;
 }
 
-.modal-btn::before {
+.btn-primary::before {
   content: "";
   background: #000;
   width: 120%;
@@ -1913,11 +1913,11 @@ header .mobile-menu {
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
-.modal-btn:hover::before {
+.btn-primary:hover::before {
   transform: translate3d(100%, 0, 0);
 }
 
-.modal-btn:active {
+.btn-primary:active {
   transform: scale(0.95);
 }
 

@@ -89,7 +89,7 @@ function Signin({ isOpen, toggle }) {
 
           </div>
 
-          <Button class = "modal-btn" color="primary" type="button" onClick={handleSignin}>
+          <Button color="primary" type="button" onClick={handleSignin}>
              <span> Sign In </span>
           </Button>
         </ModalBody>
