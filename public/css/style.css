@@ -540,11 +540,45 @@ header .header-inner .mail p {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
+  margin-right: 15px;
 }
 
 header .mobile-menu {
   display: none;
 }
+
+.mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span.sign-out {
+  padding-left: 12px;
+  font-size: 1.1rem;
+  border-left: 2px solid #ccc;
+  position: relative;
+}
+
+.sign-out::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.sign-out:hover::before {
+transform-origin: left;
+transform: scaleX(1);
+}
+
 
 /* [ SECTIONS ] */
 /*================================================== */
@@ -1924,10 +1958,11 @@ header .mobile-menu {
 
 .sign-up-link:hover {
   cursor: pointer;
-  opacity: 0.9;
-  transition: .9s;
+  opacity: 0.8;
   text-decoration: underline;
 }
+
+
 
 
 /* [ RESPONSIVE ] */
