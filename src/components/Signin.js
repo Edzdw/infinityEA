@@ -80,7 +80,7 @@ function Signin({ isOpen, toggle }) {
           </div>
 
           <div class = "form-group">
-            <input class ="modal-user-password" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
+            <input class ="form-field" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
