@@ -149,7 +149,7 @@ const About = () => {
         <SwiperSlide className="single-item swiper-slide">
           {/* ITEM MAIN CONTENT STARTS */}
           <div className="main-content ">
-            <ul>Danh sách F2
+            <ul> <h3 class = 'network-title'>Danh sách F2</h3>  
               {Array.isArray(networks.F2) && networks.F2.length > 0 ? (
                 <>
                   <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
@@ -189,7 +189,7 @@ const About = () => {
         <SwiperSlide className="single-item swiper-slide">
           {/* ITEM MAIN CONTENT STARTS */}
           <div className="main-content">
-            <ul>Danh sách F3
+            <ul><h3 class = 'network-title'>Danh sách F3 </h3>  
               {Array.isArray(networks.F3) && networks.F3.length > 0 ? (
                 <>
                   <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
@@ -229,7 +229,7 @@ const About = () => {
         <SwiperSlide className="single-item swiper-slide">
           {/* ITEM MAIN CONTENT STARTS */}
           <div className="main-content">
-            <ul>Danh sách F4
+            <ul> <h3 class = 'network-title'>Danh sách F4 </h3> 
               {Array.isArray(networks.F4) && networks.F4.length > 0 ? (
                 <>
                   <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
@@ -269,7 +269,7 @@ const About = () => {
         <SwiperSlide className="single-item swiper-slide">
           {/* ITEM MAIN CONTENT STARTS */}
           <div className="main-content">
-            <ul>Danh sách F5
+            <ul> <h3 class = 'network-title'>Danh sách F5 </h3> 
               {Array.isArray(networks.F5) && networks.F5.length > 0 ? (
                 <>
                   <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
