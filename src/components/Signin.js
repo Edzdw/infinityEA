@@ -68,20 +68,26 @@ function Signin({ isOpen, toggle }) {
           </h5>
         </div>
         <ModalBody style={{ color: "black", display: "flex", flexDirection: "column", gap: "10px" }}>
+          
           <div class = "form-group">
+            <span> Email </span>
+
             <input class ="form-field" type="email" id="email" placeholder="Nhập email..." value={email} style={{ width: "100%" }}
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
               />
-            <span> @gmail.com </span>
+          </div>
+
+          <div class = "form-group">
+            <input class ="modal-user-password" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+            <span> Password </span>
 
           </div>
-          <input class ="modal-user-password" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
 
           <Button color="primary" type="button" onClick={handleSignin}>
             Sign In

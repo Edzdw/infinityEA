@@ -64,9 +64,9 @@ body {
   --group-border: var(--input-border);
   --group-background: #EEF4FF;
 
-  --group-color-focus: #fff;
+  --group-color-focus: #000 ;
   --group-border-focus: var(--input-border-focus);
-  --group-background-focus: #678EFE;
+  --group-background-focus: gold ;
 }
 
 #wrapper {
