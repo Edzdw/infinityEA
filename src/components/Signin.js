@@ -95,7 +95,7 @@ function Signin({ isOpen, toggle }) {
         </ModalBody>
 
         <ModalFooter style={{ color: "black" }}>
-          <i>Chưa có tài khoản? Nhấn vào <span style={{ color: "blue", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để đăng ký</i>
+          <i>Chưa có tài khoản? Nhấn vào <span class="sign-up-link" style={{ color: "gold", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để đăng ký</i>
         </ModalFooter>
       </Modal>
       <Signup isOpen={isSignupModalOpen} toggle={toggleSignupModal} />

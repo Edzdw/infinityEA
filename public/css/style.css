@@ -1880,7 +1880,7 @@ header .mobile-menu {
   border-radius: 0.8em;
   border: none;
   background: linear-gradient(to right, #DBA514, #FCC201);
-  /* color: ghostwhite; */
+  color: ghostwhite;
   overflow: hidden;
 }
 
@@ -1921,6 +1921,13 @@ header .mobile-menu {
   transform: scale(0.95);
 }
 
+
+.sign-up-link:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: .9s;
+  text-decoration: underline;
+}
 
 
 /* [ RESPONSIVE ] */

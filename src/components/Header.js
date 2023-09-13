@@ -89,6 +89,9 @@ const Header = () => {
           <p>
             Email :<span> alexfinance101@outlook.com</span>
           </p>
+          <span class = "sign-out">
+              Đăng Xuất 
+          </span>
         </div>
         {/* FREELANCE ENDS */}
       </div>
