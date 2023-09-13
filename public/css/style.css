@@ -58,7 +58,7 @@ body {
   --input-background: #fff;
   --input-placeholder: #CBD1DC;
 
-  --input-border-focus: #275EFE;
+  --input-border-focus: #000;
 
   --group-color: var(--input-color);
   --group-border: var(--input-border);
