@@ -1905,6 +1905,13 @@ span.sign-out {
   }
 }
 
+.text-gold {
+  color: gold;
+}
+
+.modal-sub-title{
+  margin-bottom: 0;
+}
 
 /* MODAL-BTN */
 

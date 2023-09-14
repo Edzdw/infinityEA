@@ -63,7 +63,7 @@ function Signin({ isOpen, toggle }) {
     <>
       <Modal isOpen={isOpen} toggle={toggle}>
         <div className=" modal-header">
-          <h5 className=" modal-title text-black" id="exampleModalLabel">
+          <h5 className=" modal-title text-gold" id="exampleModalLabel">
              Đăng nhập
           </h5>
 
