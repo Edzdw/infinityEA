@@ -100,7 +100,7 @@ function Signin({ isOpen, toggle }) {
         </ModalBody>
 
         <ModalFooter style={{ color: "black" }}>
-          <i>Chưa có tài khoản? Nhấn vào <span class="sign-up-link" style={{ color: "#ffb400", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để đăng ký</i>
+          <i>Quên mật khẩu? Nhấn vào <span class="sign-up-link" style={{ color: "#ffb400", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để tạo lại mật khẩu</i>
         </ModalFooter>
       </Modal>
       <Signup isOpen={isSignupModalOpen} toggle={toggleSignupModal} />
