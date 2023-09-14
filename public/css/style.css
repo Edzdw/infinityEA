@@ -1946,14 +1946,10 @@ span.sign-out {
   color: var(--text-color);
   cursor: pointer;
   scale: 1.2;
-  transform-origin: inherit;
   transition: .9s;
+  transform: translate(-10px, -2px);
 }
 
-.modal-sub-title:hover ~ .modal-main-title {
-  font-size: 1rem;
-  color: #ccc;
-}
 
 /* MODAL-BTN */
 
