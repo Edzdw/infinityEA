@@ -76,13 +76,13 @@ function Signup({ isOpen, toggle }) {
     <>
       <Modal isOpen={isOpen} toggle={toggle}>
         <div className=" modal-header">
-          <h5 className=" modal-main-title" id="exampleModalLabel">
-            Đăng Nhập
-          </h5>
-            <span className="modal-line">  </span>
           <h6 className="modal-sub-title" id = "">
-              Đăng kí
+              Đăng Nhập
           </h6>
+            <span className="modal-line">  </span>
+          <h5 className=" modal-main-title" id="exampleModalLabel">
+            Đăng Ký
+          </h5>
         </div>
         <ModalBody style={{ color: "black", display: "flex", flexDirection: "column", gap: "20px" }}>
           <input class ="form-field" type="text" id="lastName" placeholder="Nhập họ..." value={lastName} style={{ width: "100%" }}
