@@ -81,27 +81,27 @@ function Signup({ isOpen, toggle }) {
           </h5>
         </div>
         <ModalBody style={{ color: "black", display: "flex", flexDirection: "column", gap: "20px" }}>
-          <input type="text" id="lastName" placeholder="Nhập họ..." value={lastName} style={{ width: "100%" }}
+          <input class ="form-field" type="text" id="lastName" placeholder="Nhập họ..." value={lastName} style={{ width: "100%" }}
             onChange={(e) => {
               setLastName(e.target.value);
             }}
           />
-          <input type="text" id="firstName" placeholder="Nhập tên..." value={firstName} style={{ width: "100%" }}
+          <input class ="form-field" type="text" id="firstName" placeholder="Nhập tên..." value={firstName} style={{ width: "100%" }}
             onChange={(e) => {
               setFirstName(e.target.value);
             }}
           />
-          <input type="email" id="email" placeholder="Nhập email..." value={email} style={{ width: "100%" }}
+          <input class ="form-field" type="email" id="email" placeholder="Nhập email..." value={email} style={{ width: "100%" }}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
           />
-          <input type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
+          <input class ="form-field" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
             onChange={(e) => {
               setPassword(e.target.value);
             }}
           />
-          <input type="text" id="refferal" placeholder="Nhập người giới thiệu..." value={refferal} style={{ width: "100%" }}
+          <input class ="form-field" type="text" id="refferal" placeholder="Nhập người giới thiệu..." value={refferal} style={{ width: "100%" }}
             onChange={(e) => {
               setRefferal(e.target.value);
             }}
