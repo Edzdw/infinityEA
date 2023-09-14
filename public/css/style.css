@@ -1923,8 +1923,6 @@ span.sign-out {
 .modal-sub-title::before {
   content: '';
   position: absolute;
-  font-size: 1.25rem;
-  color: var(--text-color);
   width: 100%;
   height: 2px;
   border-radius: 4px;
@@ -1938,6 +1936,8 @@ span.sign-out {
 
 .modal-sub-title:hover::before {
   cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--text-color);
   transform-origin: left;
   transform: scaleX(1);
 
