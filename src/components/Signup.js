@@ -79,7 +79,6 @@ function Signup({ isOpen, toggle }) {
           <h6 className="modal-sub-title" id = "">
               Đăng Nhập
           </h6>
-            <span className="modal-line">  </span>
           <h5 className=" modal-main-title" id="exampleModalLabel">
             Đăng Ký
           </h5>
