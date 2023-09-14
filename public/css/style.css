@@ -1913,14 +1913,16 @@ span.sign-out {
 
 .modal-sub-title{
   margin-bottom: 0;
+  font-size: 1rem;
+  color: #ccc;
 }
-
-.modal-sub-title:hover .text-black {
-  cursor: pointer;
+.modal-sub-title:hover {
   font-size: 1.25rem;
   color: var(--text-color);
-  transition: .9s;
+  transition: 0.9s;
+  text-decoration: underline;
 }
+
 
 
 /* MODAL-BTN */

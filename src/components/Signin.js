@@ -67,7 +67,7 @@ function Signin({ isOpen, toggle }) {
              Đăng nhập
           </h5>
 
-          <h6 className="modal-sub-title text-black" onClick={toggleSignupModal} id = "">
+          <h6 className="modal-sub-title" onClick={toggleSignupModal} id = "">
               Đăng kí
           </h6>
 
