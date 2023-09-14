@@ -1916,7 +1916,6 @@ span.sign-out {
   margin-bottom: 0;
   font-size: 1rem;
   color: #ccc;
-  cursor: pointer;
   position: relative;
 }
 
@@ -1936,11 +1935,15 @@ span.sign-out {
 
 .modal-sub-title:hover::before {
   cursor: pointer;
-  font-size: 1.25rem;
-  color: var(--text-color);
   transform-origin: left;
   transform: scaleX(1);
 
+}
+
+.modal-sub-title:hover {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  cursor: pointer;
 }
 
 
