@@ -109,10 +109,10 @@ function Signup({ isOpen, toggle }) {
         </ModalBody>
         <ModalFooter>
 
-          <i>Chưa có tài khoản? Nhấn vào <span class="sign-up-link" style={{ color: "blue", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để đăng ký</i>
+          <i>Chưa có tài khoản? Nhấn vào <span class="sign-up-link" style={{ color: "blue", cursor: "pointer" }}>đây</span> để đăng ký</i>
 
           <Button color="primary" type="button" onClick={handleSignup}>
-            <span class = "white-text" > Sign In </span>
+            <span style={ { color: "white" }} > Sign In </span>
           </Button>
         </ModalFooter>
       </Modal>
