@@ -67,7 +67,7 @@ function Signin({ isOpen, toggle }) {
              Đăng nhập
           </h5>
 
-          <h6 className="modal-sub-title text-black" id = "">
+          <h6 className="modal-sub-title text-black" onClick={toggleSignupModal} id = "">
               Đăng kí
           </h6>
 
@@ -100,7 +100,7 @@ function Signin({ isOpen, toggle }) {
         </ModalBody>
 
         <ModalFooter style={{ color: "black" }}>
-          <i>Chưa có tài khoản? Nhấn vào <span class="sign-up-link" style={{ color: "blue", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để đăng ký</i>
+          <i>Chưa có tài khoản? Nhấn vào <span class="sign-up-link" style={{ color: "#ffb400", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để đăng ký</i>
         </ModalFooter>
       </Modal>
       <Signup isOpen={isSignupModalOpen} toggle={toggleSignupModal} />
