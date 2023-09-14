@@ -1908,8 +1908,10 @@ span.sign-out {
   }
 }
 
-.text-gold {
+.modal-main-title  {
   color: var(--text-color);
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .modal-sub-title{
@@ -1941,11 +1943,17 @@ span.sign-out {
 }
 
 .modal-sub-title:hover {
-  font-size: 1.25rem;
   color: var(--text-color);
   cursor: pointer;
+  scale: 1.2;
+  transform-origin: inherit;
+  transition: .9s;
 }
 
+.modal-sub-title:hover ~ .modal-title {
+  font-size: 1rem;
+  color: #ccc;
+}
 
 /* MODAL-BTN */
 
