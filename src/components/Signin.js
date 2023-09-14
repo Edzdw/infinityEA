@@ -64,8 +64,13 @@ function Signin({ isOpen, toggle }) {
       <Modal isOpen={isOpen} toggle={toggle}>
         <div className=" modal-header">
           <h5 className=" modal-title text-black" id="exampleModalLabel">
-            Đăng nhập
+             Đăng nhập
           </h5>
+
+          <h6 className="modal-sub-title text-black" id = "">
+              Đăng kí
+          </h6>
+
         </div>
         <ModalBody style={{ color: "black", display: "flex", flexDirection: "column", gap: "10px" }}>
           
