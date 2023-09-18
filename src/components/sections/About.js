@@ -53,7 +53,7 @@ const About = () => {
                 <span>
                   <span className="animated-layer fade-in-up-animation fadeInUp wow">
                     <span>Chức vụ:</span>
-                    <span>RD (Regional Director, FWD)</span>
+                    <span>Freelancer</span>
                   </span>
                 </span>
               </li>
@@ -87,7 +87,7 @@ const About = () => {
                 <span>
                   <span className="animated-layer fade-in-up-animation fadeInUp wow">
                     <span>Email :</span>
-                    <span> alexfinance101@outlook.com</span>
+                    <span> finance101@alexgroup.vn </span>
                   </span>
                 </span>
               </li>
@@ -233,23 +233,7 @@ const About = () => {
               </div>
             </li>
             {/* TIMELINE ITEM ENDS */}
-            {/* TIMELINE ITEM STARTS */}
-            <li>
-              <div className="animated-layer fade-in-up-animation fadeInUp wow">
-                <div className="experience">
-                  <h4>Infinity 4</h4>
-                  <p>
-                    <i className="fa-regular fa-clock" />
-                    <span>4 2023</span>
-                  </p>
-                  <p>
-                    <i className="fa-regular fa-building" />
-                    <span>Giảm vị thế xấu</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-            {/* TIMELINE ITEM ENDS */}
+            
             {/* TIMELINE ITEM STARTS */}
             <li>
               <div className="animated-layer fade-in-down-animation fadeInUp wow">
@@ -267,23 +251,7 @@ const About = () => {
               </div>
             </li>
             {/* TIMELINE ITEM ENDS */}
-            {/* TIMELINE ITEM STARTS */}
-            <li>
-              <div className="animated-layer fade-in-up-animation fadeInUp wow">
-                <div className="education">
-                  <h4>Infinity EA</h4>
-                  <p>
-                    <i className="fa-regular fa-clock" />
-                    <span>2023+</span>
-                  </p>
-                  <p>
-                    <i className="fa-solid fa-building-columns" />
-                    <span>Đang phát triển</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-            {/* TIMELINE ITEM ENDS */}
+
             {/* TIMELINE ITEM STARTS */}
             <li>
               <div className="animated-layer fade-in-down-animation fadeInUp wow">
@@ -301,6 +269,43 @@ const About = () => {
               </div>
             </li>
             {/* TIMELINE ITEM ENDS */}
+            
+            {/* TIMELINE ITEM STARTS */}
+            <li>
+              <div className="animated-layer fade-in-up-animation fadeInUp wow">
+                <div className="experience">
+                  <h4>Infinity 4</h4>
+                  <p>
+                    <i className="fa-regular fa-clock" />
+                    <span>4 2023</span>
+                  </p>
+                  <p>
+                    <i className="fa-regular fa-building" />
+                    <span>Giảm vị thế xấu</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            {/* TIMELINE ITEM ENDS */}
+
+            {/* TIMELINE ITEM STARTS */}
+            <li>
+              <div className="animated-layer fade-in-up-animation fadeInUp wow">
+                <div className="education">
+                  <h4>Infinity EA</h4>
+                  <p>
+                    <i className="fa-regular fa-clock" />
+                    <span>2023+</span>
+                  </p>
+                  <p>
+                    <i className="fa-solid fa-building-columns" />
+                    <span>Đang phát triển</span>
+                  </p>
+                </div>
+              </div>
+            </li>
+            {/* TIMELINE ITEM ENDS */}
+            
             <li />
           </ol>
         </div>
