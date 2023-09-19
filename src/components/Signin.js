@@ -46,18 +46,16 @@ function Signin({ isOpen, toggle }) {
 
     Axios.request(config)
       .then((response) => {
+        console.log(response);
         if (response.status === 200) {
           normalAlert("Đăng nhập thành công!", "success");
           localStorage.setItem("email", email);
           localStorage.setItem("access_token", response.data.access_token);
           window.location.reload();
-        } else if (response.status == 403) {
-          normalAlert("Email hoặc mật khẩu không chính xác, xin vui lòng thử lại!", "error");
         }
       })
       .catch((error) => {
-        console.log("error", error);
-        localStorage.clear();
+        normalAlert("Email hoặc mật khẩu không chính xác, xin vui lòng thử lại!", "error");
       });
   }
 
