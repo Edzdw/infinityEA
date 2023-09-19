@@ -41,9 +41,12 @@ function LinkRef({ isOpen, toggle, current }) {
           toggle();
         } else if (response.data.status === 404) {
           normalAlert("ID người giới thiệu không tồn tại!", "error");
+        } else {
+          normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         }
       }).catch((error) => {
-        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+        console.log("error", error);
+        localStorage.clear();
       });
   }
 

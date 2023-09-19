@@ -44,13 +44,24 @@ const Header = () => {
 
     Axios.request(config)
       .then((response) => {
-        if (response.data == 1) {
-          toggleLinkRefModal();
+        if (response == "ok") {
+          if (response.data == 1) {
+            toggleLinkRefModal();
+          }
+        } else {
+          normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         }
-      }).catch((error) => {
-        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+      }).catch(error => {
+        console.log("error", error);
+        localStorage.clear();
       });
   }, [email]);
+
+  const handleLogout = () => {
+    localStorage.clear();
+    normalAlert("Đã đăng xuất!", "success");
+    window.location.reload();
+  }
 
   return (
     <header>
@@ -89,9 +100,9 @@ const Header = () => {
           <p>
             Email :<span> finance101@alexgroup.vn </span>
           </p>
-          <span id ="log-out" class = "sign-out">
+          {email ? <span id ="log-out" class = "sign-out" onClick={handleLogout}>
               Logout
-          </span>
+          </span> : ""}
         </div>
         {/* FREELANCE ENDS */}
       </div>
@@ -135,6 +146,9 @@ const Header = () => {
               </a> : <a href="#network">
                 <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>
               </a>}
+            </li>
+            <li>
+              {email ? <a href="#"><span onClick={handleLogout}>Logout</span></a> : ""}
             </li>
           </ul>
         </div>
