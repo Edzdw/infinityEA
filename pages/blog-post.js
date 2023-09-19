@@ -39,7 +39,7 @@ const BlogPost = () => {
               <p>Bước 2: Tại giao diện trang chủ, bấm vào mục Đăng Nhập, sau đó chọn Tạo Tài Khoản.</p>
               <p>Điền các trường cần thiết, sau đó tại mục Mã giới thiệu nhập mã giới thiệu như sau:</p> 
             </p> 
-            <p class = "ref-text">
+            <p className = "ref-text">
               3hjpuzkltk
             </p>
             <p>

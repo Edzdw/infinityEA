@@ -100,7 +100,7 @@ const Header = () => {
           <p>
             Email :<span> finance101@alexgroup.vn </span>
           </p>
-          {email ? <span id ="log-out" class = "sign-out" onClick={handleLogout}>
+          {email ? <span id ="log-out" className = "sign-out" onClick={handleLogout}>
               Logout
           </span> : ""}
         </div>

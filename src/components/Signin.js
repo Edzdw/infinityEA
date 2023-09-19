@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import Signup from "./Signup";
+import Forgot from "./ForgotPass";
 import { normalAlert } from "./Swal";
 
 // reactstrap components
@@ -10,9 +11,14 @@ function Signin({ isOpen, toggle }) {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [isSignupModalOpen, setIsSignupModalOpen] = React.useState(false);
+  const [isForgotModalOpen, setIsForgotModalOpen] = React.useState(false);
 
   const toggleSignupModal = () => {
     setIsSignupModalOpen(!isSignupModalOpen);
+  };
+
+  const toggleForgotModal = () => {
+    setIsForgotModalOpen(!isForgotModalOpen);
   };
 
   const handleSignin = () => {
@@ -75,18 +81,18 @@ function Signin({ isOpen, toggle }) {
         </div>
         <ModalBody style={{ color: "black", display: "flex", flexDirection: "column", gap: "10px" }}>
           
-          <div class = "form-group">
+          <div className = "form-group">
             <span> Email </span>
 
-            <input class ="form-field" type="email" id="email" placeholder="Nhập email..." value={email} style={{ width: "100%" }}
+            <input className ="form-field" type="email" id="email" placeholder="Nhập email..." value={email} style={{ width: "100%" }}
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
               />
           </div>
 
-          <div class = "form-group">
-            <input class ="form-field" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
+          <div className = "form-group">
+            <input className ="form-field" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
@@ -101,10 +107,11 @@ function Signin({ isOpen, toggle }) {
         </ModalBody>
 
         <ModalFooter style={{ color: "black" }}>
-          <i>Quên mật khẩu? Nhấn vào <span className="sign-up-link" style={{ color: "#ffb400", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để tạo lại mật khẩu</i>
+          <i>Quên mật khẩu? Nhấn vào <span className="sign-up-link" style={{ color: "#ffb400", cursor: "pointer" }} onClick={toggleForgotModal}>đây</span> để tạo lại mật khẩu</i>
         </ModalFooter>
       </Modal>
       <Signup isOpen={isSignupModalOpen} toggle={toggleSignupModal} />
+      <Forgot isOpen={isForgotModalOpen} toggle={toggleForgotModal} success={toggleForgotModal} />
     </>
   );
 }
