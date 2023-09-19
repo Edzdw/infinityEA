@@ -45,12 +45,13 @@ function Signin({ isOpen, toggle }) {
           localStorage.setItem("email", email);
           localStorage.setItem("access_token", response.data.access_token);
           window.location.reload();
+        } else if (error.response.status == 403) {
+          normalAlert("Email hoặc mật khẩu không chính xác, xin vui lòng thử lại!", "error");
         }
       })
       .catch((error) => {
-        if (error.response.status == 403) {
-          normalAlert("Email hoặc mật khẩu không chính xác, xin vui lòng thử lại!", "error");
-        }
+        console.log("error", error);
+        localStorage.clear();
       });
   }
 
@@ -100,7 +101,7 @@ function Signin({ isOpen, toggle }) {
         </ModalBody>
 
         <ModalFooter style={{ color: "black" }}>
-          <i>Quên mật khẩu? Nhấn vào <span class="sign-up-link" style={{ color: "#ffb400", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để tạo lại mật khẩu</i>
+          <i>Quên mật khẩu? Nhấn vào <span className="sign-up-link" style={{ color: "#ffb400", cursor: "pointer" }} onClick={toggleSignupModal}>đây</span> để tạo lại mật khẩu</i>
         </ModalFooter>
       </Modal>
       <Signup isOpen={isSignupModalOpen} toggle={toggleSignupModal} />

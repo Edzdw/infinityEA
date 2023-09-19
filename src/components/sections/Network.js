@@ -77,6 +77,7 @@ const About = () => {
         })
         .catch((error) => {
           normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+          localStorage.clear();
         });
     } else {
       return;
