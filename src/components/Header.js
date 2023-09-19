@@ -48,8 +48,6 @@ const Header = () => {
           if (response.data == 1) {
             toggleLinkRefModal();
           }
-        } else {
-          normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         }
       }).catch(error => {
         console.log("error", error);
