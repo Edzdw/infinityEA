@@ -41,7 +41,7 @@ const Facts = () => {
             <div>
               <h3>50%</h3>
               <p>
-                Mốc bảo vệ<span>Level 2</span>
+                Mốc bảo vệ<span>Mức 2</span>
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ const Facts = () => {
             <div>
               <h3>30%</h3>
               <p>
-                Mốc bảo vệ<span>Lever 1</span>
+                Mốc bảo vệ<span>Mức 1</span>
               </p>
             </div>
           </div>
