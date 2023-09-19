@@ -39,9 +39,9 @@ const Facts = () => {
         >
           <div>
             <div>
-              <h3>50%</h3>
+              <h3>30%</h3>
               <p>
-                Mốc bảo vệ<span>Mức 2</span>
+                Mốc bảo vệ<span>Mức 1</span>
               </p>
             </div>
           </div>
@@ -54,9 +54,9 @@ const Facts = () => {
         >
           <div>
             <div>
-              <h3>30%</h3>
+              <h3>50%</h3>
               <p>
-                Mốc bảo vệ<span>Mức 1</span>
+                Mốc bảo vệ<span>Mức 2</span>
               </p>
             </div>
           </div>
