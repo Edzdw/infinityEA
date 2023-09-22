@@ -91,8 +91,6 @@ const About = () => {
         </ul>
       </div>
 
-
-
       <img
         alt=""
         className="separator hide-mobile"

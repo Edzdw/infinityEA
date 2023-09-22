@@ -95,10 +95,10 @@ const Header = () => {
                 <span id="blog-link">Blog</span>
               </li>
               <li>
-                {email ? <span id="network-link">Network</span> : <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>}
+                {email ? <span id="network-link">Network</span> : ""}
               </li>
               <li>
-                {email ? <span id="exness-link">Add Exness</span> : ""}
+                {email ? <span id="exness-link" onClick={toggleAddExnessModal}>Add Exness</span> : ""}
               </li>
             </ul>
           </nav>
@@ -111,7 +111,7 @@ const Header = () => {
           </p>
           {email ? <span id ="log-out" className = "sign-out" onClick={handleLogout}>
               Logout
-          </span> : ""}
+          </span> : <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>}
         </div>
         {/* FREELANCE ENDS */}
       </div>
