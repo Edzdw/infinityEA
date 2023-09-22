@@ -80,9 +80,9 @@ const About = () => {
         <span>Không có F1</span>
       ) : (
         networks.map((item, index) => (
-          <span onClick={() => { handleShowNext(item.email, item.referrer) }} key={index}>
+          <p onClick={() => { handleShowNext(item.email, item.referrer) }} key={index}>
             {item.email}
-          </span>
+          </p>
         ))
       )}
 
