@@ -77,13 +77,14 @@ const About = () => {
       {/* TITLE ENDS */}
 
       <div className="main-content">
+        <h3 className = "main-content-title"> Danh sách Partner </h3>
         {currentRoot !== email ? <button onClick={handleGoBack}>Quay lại</button> : ""}
         <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
           {networks.length === 0 ? (
             <span>Không có F1</span>
           ) : (
             networks.map((item, index) => (
-              <li key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
+              <li class ="network-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
                 {item.email}
               </li>
             ))

@@ -557,14 +557,14 @@ header .mobile-menu {
   justify-content: center;
 }
 
-span.sign-out {
+span.log-btn {
   margin-left: 12px;
   font-size: 1.1rem;
   position: relative;
   cursor: pointer;
 }
 
-.sign-out::before {
+.log-btn::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -578,7 +578,7 @@ span.sign-out {
   transition: transform .3s ease-in-out;
 }
 
-.sign-out:hover::before {
+.log-btnt:hover::before {
   cursor: pointer;
   transform-origin: left;
   transform: scaleX(1);
