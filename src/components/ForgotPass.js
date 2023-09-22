@@ -44,7 +44,12 @@ function ForgotPass({ isOpen, toggle, success }) {
               }
           })
           .catch((error) => {
-              console.log(error);
+            normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+            localStorage.clear();
+            setTimeout(() => {
+              window.location.reload();
+            }, 1500);
+            return;
           });
   }
 
@@ -75,7 +80,6 @@ function ForgotPass({ isOpen, toggle, success }) {
       Axios.request(config)
           .then((response) => response.data)
           .then(result => {
-              console.log(result);
               if (result === "Email không tồn tại!") {
                   normalAlert("Email không tồn tại, xin vui lòng thử lại!", "error");
               } else if (result === "Mã xác thực không chính xác!") {
@@ -86,7 +90,7 @@ function ForgotPass({ isOpen, toggle, success }) {
               }
           })
           .catch((error) => {
-              console.log(error);
+            normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
           });
   }
 

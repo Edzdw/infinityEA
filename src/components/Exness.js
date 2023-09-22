@@ -24,17 +24,20 @@ function Exness({ isOpen, toggle, success }) {
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: 'https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/get-exness/admin@gmail.com',
+      url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/get-exness/${email}`,
       headers: {}
     };
 
     Axios.request(config)
       .then((response) => {
-        console.log(response.data);
         setListExness(response.data);
       })
       .catch(() => {
-        normalAlert("Lỗi không thể lấy danh sách Exness ID, vui lòng thử lại sau!", "error");
+        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+        localStorage.clear();
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
         return;
       });
 
@@ -70,7 +73,6 @@ function Exness({ isOpen, toggle, success }) {
 
     Axios.request(config)
       .then((response) => {
-        console.log(response.data.message);
         if (response.data.message === "Exness ID cập nhật thành công cho user: " + email) {
           normalAlert("Thêm Exness ID thành công!", "success");
           setTimeout(() => {
@@ -81,7 +83,11 @@ function Exness({ isOpen, toggle, success }) {
         }
       })
       .catch(() => {
-        normalAlert("Lỗi không thể cập nhật Exness ID, vui lòng thử lại sau!", "error");
+        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+        localStorage.clear();
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
         return;
       });
   }

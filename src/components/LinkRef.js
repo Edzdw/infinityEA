@@ -47,8 +47,12 @@ function LinkRef({ isOpen, toggle, current }) {
           normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         }
       }).catch((error) => {
-        console.log("error", error);
+        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         localStorage.clear();
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+        return;
       });
   }
 

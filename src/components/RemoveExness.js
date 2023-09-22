@@ -39,10 +39,13 @@ function RemoveExness({ isOpen, toggle, id }) {
         } else if (response.data.message === "Exness ID này không tồn tại.") {
           normalAlert("Exness ID này đã được thêm vào hệ thống!", "error");
         }
-        console.log(response.data);
       })
       .catch(() => {
-        normalAlert("Lỗi không thể cập nhật Exness ID, vui lòng thử lại sau!", "error");
+        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+        localStorage.clear();
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
         return;
       });
 

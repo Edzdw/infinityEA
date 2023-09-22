@@ -59,8 +59,7 @@ function Signup({ isOpen, toggle }) {
         }
       })
       .catch((error) => {
-        console.log("error", error);
-        localStorage.clear();
+        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
       });
 
   }

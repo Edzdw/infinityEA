@@ -46,7 +46,6 @@ function Signin({ isOpen, toggle }) {
 
     Axios.request(config)
       .then((response) => {
-        console.log(response);
         if (response.status === 200) {
           normalAlert("Đăng nhập thành công!", "success");
           localStorage.setItem("email", email);
