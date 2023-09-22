@@ -22,7 +22,7 @@ function RemoveExness({ isOpen, toggle, id }) {
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'http://localhost:8080/api/v1/auth/update-exness',
+      url: 'https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/update-exness',
       headers: {
         'Content-Type': 'application/json'
       },

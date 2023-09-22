@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import RemoveExness from "./RemoveExness";
+
 import { normalAlert } from "./Swal";
 
 // reactstrap components
@@ -23,7 +24,7 @@ function Exness({ isOpen, toggle, success }) {
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: 'http://localhost:8080/api/v1/auth/get-exness/admin@gmail.com',
+      url: 'https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/get-exness/admin@gmail.com',
       headers: {}
     };
 
@@ -118,10 +119,10 @@ function Exness({ isOpen, toggle, success }) {
 
           {listExness.map((item) => {
             return (<div className="form-group" key={item} >
-                <span> Exness ID </span>
-                <input className="form-field" type="text" value={item} style={{ width: "100%" }} readOnly={true} />
-                <span style={{ color: "red", cursor: "pointer" }} onClick={() => { toggleRemoveExnessModal(item) }}> X </span>
-              </div>)
+              <span> Exness ID </span>
+              <input className="form-field" type="text" value={item} style={{ width: "100%" }} readOnly={true} />
+              <span style={{ color: "red", cursor: "pointer" }} onClick={() => { toggleRemoveExnessModal(item) }}> X </span>
+            </div>)
           })}
 
           <RemoveExness isOpen={isRemoveExnessModalOpen} id={exnessRemove} toggle={toggleRemoveExnessModal} />
