@@ -75,16 +75,23 @@ const About = () => {
         {/* MAIN TITLE ENDS */}
       </div>
       {/* TITLE ENDS */}
-      {currentRoot !== email ? <button onClick={handleGoBack}>Quay lại</button> : ""}
-      {networks.length === 0 ? (
-        <span>Không có F1</span>
-      ) : (
-        networks.map((item, index) => (
-          <p onClick={() => { handleShowNext(item.email, item.referrer) }} key={index}>
-            {item.email}
-          </p>
-        ))
-      )}
+
+      <div className="main-content">
+        {currentRoot !== email ? <button onClick={handleGoBack}>Quay lại</button> : ""}
+        <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+          {networks.length === 0 ? (
+            <span>Không có F1</span>
+          ) : (
+            networks.map((item, index) => (
+              <li key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
+                {item.email}
+              </li>
+            ))
+          )}
+        </ul>
+      </div>
+
+
 
       <img
         alt=""
