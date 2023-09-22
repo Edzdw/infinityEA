@@ -24,7 +24,7 @@ function Exness({ isOpen, toggle, success }) {
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/get-exness/${email}`,
+      url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/get-exness/${encodeURI(email)}`,
       headers: {}
     };
 
