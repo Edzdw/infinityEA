@@ -38,7 +38,9 @@ function LinkRef({ isOpen, toggle, current }) {
       .then((response) => {
         if (response.data.status === 200) {
           normalAlert("Cập nhật người giới thiệu thành công!", "success");
-          toggle();
+          setTimeout(() => {
+            window.location.reload();
+          }, 1500);
         } else if (response.data.status === 404) {
           normalAlert("ID người giới thiệu không tồn tại!", "error");
         } else {

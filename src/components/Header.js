@@ -1,12 +1,14 @@
 import React from "react";
 import Signin from "./Signin";
 import LinkRef from "./LinkRef";
+import Exness from "./Exness";
 import Axios from "axios";
 import { normalAlert } from "./Swal";
 
 const Header = () => {
   const [isSignInModalOpen, setIsSignInModalOpen] = React.useState(false);
   const [isLinkRefModalOpen, setIsLinkRefModalOpen] = React.useState(false);
+  const [isAddExnessModalOpen, setIsAddExnessModalOpen] = React.useState(false);
 
   const [email, setEmail] = React.useState("");
 
@@ -16,6 +18,10 @@ const Header = () => {
 
   const toggleLinkRefModal = () => {
     setIsLinkRefModalOpen(!isLinkRefModalOpen);
+  };
+
+  const toggleAddExnessModal = () => {
+    setIsAddExnessModalOpen(!isAddExnessModalOpen);
   };
 
   React.useEffect(() => {
@@ -58,7 +64,9 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     normalAlert("Đã đăng xuất!", "success");
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
   }
 
   return (
@@ -88,6 +96,9 @@ const Header = () => {
               </li>
               <li>
                 {email ? <span id="network-link">Network</span> : <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>}
+              </li>
+              <li>
+                {email ? <span id="exness-link">Add Exness</span> : ""}
               </li>
             </ul>
           </nav>
@@ -146,6 +157,11 @@ const Header = () => {
               </a>}
             </li>
             <li>
+              {email ? <a href="#exness">
+                <span onClick={toggleAddExnessModal}>Exness</span>
+              </a> : ""}
+            </li>
+            <li>
               {email ? <a href="#"><span onClick={handleLogout}>Logout</span></a> : ""}
             </li>
           </ul>
@@ -155,6 +171,8 @@ const Header = () => {
       {isSignInModalOpen && <Signin isOpen={isSignInModalOpen} toggle={toggleSignInModal} />}
 
       <LinkRef isOpen={isLinkRefModalOpen} toggle={toggleLinkRefModal} current={email} />
+
+      {isAddExnessModalOpen && <Exness isOpen={isAddExnessModalOpen} toggle={toggleAddExnessModal} success={toggleAddExnessModal}/>}
     </header>
   );
 };

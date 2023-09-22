@@ -47,7 +47,9 @@ function Signup({ isOpen, toggle }) {
           normalAlert("Đăng ký thành công!", "success");
           localStorage.setItem("email", email);
           localStorage.setItem("access_token", response.data.access_token);
-          window.location.reload();
+          setTimeout(() => {
+            window.location.reload();
+          }, 1500);
         } else if (error.response.status == 403) {
           normalAlert("Email đã tồn tại trong hệ thống, vui lòng thử lại!", "error");
         } else if (error.response.status == 402) {

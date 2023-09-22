@@ -51,7 +51,9 @@ function Signin({ isOpen, toggle }) {
           normalAlert("Đăng nhập thành công!", "success");
           localStorage.setItem("email", email);
           localStorage.setItem("access_token", response.data.access_token);
-          window.location.reload();
+          setTimeout(() => {
+            window.location.reload();
+          }, 1500);
         }
       })
       .catch((error) => {
