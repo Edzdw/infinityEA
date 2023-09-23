@@ -109,9 +109,9 @@ const Header = () => {
           <p>
             Email :<span> finance101@alexgroup.vn </span>
           </p>
-          {email ? <span id ="log-out" className = "log-btn" onClick={handleLogout}>
+          {email ? <span id ="log-out" onClick={handleLogout}>
               Logout
-          </span> : <span id="sign-in" classname = "log-btn" onClick={toggleSignInModal}>Sign In</span>}
+          </span> : <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>}
         </div>
         {/* FREELANCE ENDS */}
       </div>
@@ -153,12 +153,12 @@ const Header = () => {
               {email ? <a href="#network">
                 <span>Network</span>
               </a> : <a href="#network">
-                <span class = "log-btn" id="sign-in" onClick={toggleSignInModal}>Sign In</span>
+                <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>
               </a>}
             </li>
             <li>
               {email ? <a href="#exness">
-                <span class = "log-btn" onClick={toggleAddExnessModal}>Exness</span>
+                <span onClick={toggleAddExnessModal}>Exness</span>
               </a> : ""}
             </li>
             <li>
