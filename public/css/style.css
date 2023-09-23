@@ -578,7 +578,7 @@ header .mobile-menu {
   transition: transform .3s ease-in-out;
 }
 
-.sign-in:hover::before {
+#sign-in:hover::before {
   cursor: pointer;
   transform-origin: left;
   transform: scaleX(1);
@@ -586,7 +586,7 @@ header .mobile-menu {
 }
 
 
-#logout {
+#log-out {
   margin-left: 12px;
   font-size: 1.1rem;
   position: relative;
@@ -607,7 +607,7 @@ header .mobile-menu {
   transition: transform .3s ease-in-out;
 }
 
-.log-out:hover::before {
+#log-out:hover::before {
   cursor: pointer;
   transform-origin: left;
   transform: scaleX(1);
@@ -1854,7 +1854,7 @@ header .mobile-menu {
   text-decoration: overline;
 }
 
-.network-title {
+.main-content-title {
   text-align: center;
   font-size: 36px;
   letter-spacing: 4px;
