@@ -153,12 +153,12 @@ const Header = () => {
               {email ? <a href="#network">
                 <span>Network</span>
               </a> : <a href="#network">
-                <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>
+                <span class = "log-btn" id="sign-in" onClick={toggleSignInModal}>Sign In</span>
               </a>}
             </li>
             <li>
               {email ? <a href="#exness">
-                <span onClick={toggleAddExnessModal}>Exness</span>
+                <span class = "log-btn" onClick={toggleAddExnessModal}>Exness</span>
               </a> : ""}
             </li>
             <li>
