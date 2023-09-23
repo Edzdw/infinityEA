@@ -84,9 +84,10 @@ const About = () => {
               <span>Không có F1</span>
             ) : (
               networks.map((item, index) => (
+                
                 <li class ="network-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
-                  {item.email}
-                  <button id = "show" onClick = "show()"> + </button> 
+                  <button id = "show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button> 
+                  {item.email}                  
                 </li>
               ))
             )}

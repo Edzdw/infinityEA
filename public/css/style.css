@@ -2044,13 +2044,18 @@ header .mobile-menu {
 }
 
 
-.network-text {
+.network-items {
   font-weight: 800;
   font-size: 50px;
   color: yellow;
   text-decoration: overline;
 }
 
+button#show {
+  color: gold;
+  background-color: transparent;
+  border: none;
+}
 
 
 
