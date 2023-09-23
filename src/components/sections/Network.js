@@ -78,7 +78,7 @@ const About = () => {
 
         <div className="network-main-content">
           <h3 className = "network-title"> Danh sách Partner </h3>
-          {currentRoot !== email ? <button onClick={handleGoBack}>Quay lại</button> : ""}
+          {currentRoot !== email ? <button onClick={handleGoBack}>-</button> : ""}
           <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
             {networks.length === 0 ? (
               <span>Không có F1</span>
@@ -93,11 +93,7 @@ const About = () => {
           </ul>
         </div>
 
-        <img
-          alt=""
-          className="separator hide-mobile"
-          src="assets/separator.png"
-        />
+
       </section>
     );
   };

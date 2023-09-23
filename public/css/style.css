@@ -2030,7 +2030,7 @@ header .mobile-menu {
 
 .network-main-content {
   width: 538px;
-  height: 372px;
+  height: 60%;
 }
 
 .network-title {
@@ -2039,13 +2039,12 @@ header .mobile-menu {
   letter-spacing: 4px;
   font-weight: 900;
   padding-bottom: 3%;
-  margin-left: 20%;
   margin-right: 20%;
   border-bottom: gold 3px solid;
 }
 
 
-.ref-text {
+.network-text {
   font-weight: 800;
   font-size: 50px;
   color: yellow;
