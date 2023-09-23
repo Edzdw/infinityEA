@@ -1847,23 +1847,6 @@ header .mobile-menu {
   height: auto;
 }
 
-.ref-text {
-  font-weight: 800;
-  font-size: 50px;
-  color: yellow;
-  text-decoration: overline;
-}
-
-.main-content-title {
-  text-align: center;
-  font-size: 36px;
-  letter-spacing: 4px;
-  font-weight: 900;
-  padding-bottom: 3%;
-  margin-left: 20%;
-  margin-right: 20%;
-  border-bottom: gold 3px solid;
-}
 
 /* MODAL-SIGNIN */
 
@@ -2039,6 +2022,34 @@ header .mobile-menu {
   cursor: pointer;
   opacity: 0.8;
   text-decoration: underline;
+}
+
+
+
+/* [NETWORK] */
+
+.network-main-content {
+  width: 538px;
+  height: 372px;
+}
+
+.network-title {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  padding-bottom: 3%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-bottom: gold 3px solid;
+}
+
+
+.ref-text {
+  font-weight: 800;
+  font-size: 50px;
+  color: yellow;
+  text-decoration: overline;
 }
 
 
