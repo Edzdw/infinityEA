@@ -78,14 +78,14 @@ const About = () => {
 
         <div className="network-main-content">
           <h3 className = "network-title"> Danh sách Partner </h3>
-          {currentRoot !== email ? <button onClick={handleGoBack}>-</button> : ""}
+          {currentRoot !== email ? <button id= "hide" onClick={handleGoBack}>-</button> : ""}
           <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
             {networks.length === 0 ? (
               <span>Không có F1</span>
             ) : (
               networks.map((item, index) => (
                 
-                <li class ="network-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
+                <li class ="ref-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
                   <button id = "show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button> 
                   {item.email}                  
                 </li>

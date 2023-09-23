@@ -2040,23 +2040,33 @@ header .mobile-menu {
   font-weight: 900;
   padding-bottom: 3%;
   margin-right: 20%;
-  border-bottom: gold 3px solid;
+  border-bottom: var(--text-color) 3px solid;
 }
 
 
 .network-items {
   font-weight: 800;
   font-size: 50px;
-  color: yellow;
+  color: var(--text-color);
   text-decoration: overline;
 }
 
+.ref-items {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
 button#show {
-  color: gold;
+  color: var(--text-color);
   background-color: transparent;
   border: none;
 }
 
+button#hide {
+  color: var(--text-color);
+  background-color: transparent;
+  border: none;
+}
 
 
 /* [ RESPONSIVE ] */
