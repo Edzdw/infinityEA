@@ -68,7 +68,7 @@ const About = () => {
         <h3>
           <span>
             <span className="animated-layer fade-in-left-animation fadeInUp wow">
-              Our Network
+              Danh sách Network
             </span>
           </span>
         </h3>
@@ -86,8 +86,11 @@ const About = () => {
               networks.map((item, index) => (
                 
                 <li class ="ref-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
+                  
+                  {item.email}
+                  <span className = "ref-text">  F1  </span>
                   <button id = "show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button> 
-                  {item.email}                  
+
                 </li>
               ))
             )}
