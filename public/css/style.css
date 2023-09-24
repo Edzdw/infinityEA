@@ -545,6 +545,7 @@ header .header-inner .mail p {
   font-weight: 500;
   padding-right: 15px;
   border-right: solid #ccc 2px;
+  cursor: pointer;
 }
 
 header .mobile-menu {

@@ -57,7 +57,7 @@ const Header = () => {
         setRefferalCode(response.data.refCode);
       }).catch(error => {
         if (error.response.status === 404) {
-          normalAlert("Email: " + email + " không tồn tại!" , "error");
+          normalAlert("Email: " + email + " không tồn tại!", "error");
         } else {
           console.log("error", error);
           normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
@@ -73,6 +73,17 @@ const Header = () => {
       window.location.reload();
     }, 1500);
   }
+
+  const handleCopy = () => {
+    if (refferalCode) {
+      navigator.clipboard.writeText(refferalCode)
+        .then(function () {
+          normalAlert("Mã giới thiệu đã được copy!", "success");
+        });
+    } else {
+      return;
+    }
+  };
 
   return (
     <header>
@@ -112,7 +123,7 @@ const Header = () => {
         {/* FREELANCE STARTS */}
         <div className="mail">
           <p>
-            Ref Code :<span> {refferalCode} </span>
+            Ref Code :<span onClick={handleCopy}> {refferalCode} </span>
           </p>
           {email ? <span id="log-out" onClick={handleLogout}>
             Logout
