@@ -2054,6 +2054,10 @@ header .mobile-menu {
 .ref-items {
   font-size: 1.2rem;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 120px;
 }
 
 button#show {
