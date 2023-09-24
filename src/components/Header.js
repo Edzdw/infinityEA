@@ -107,7 +107,7 @@ const Header = () => {
         {/* FREELANCE STARTS */}
         <div className="mail">
           <p>
-            Email :<span> finance101@alexgroup.vn </span>
+            Ref Code :<span> 1234567890 </span>
           </p>
           {email ? <span id ="log-out" onClick={handleLogout}>
               Logout
