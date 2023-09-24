@@ -2921,6 +2921,11 @@ button#hide {
     padding: 20px 0 30px;
   }
 
+  .loader {
+    left: 40%;
+    top: 50%;
+  }
+
 }
 
 .loader {
@@ -2932,8 +2937,7 @@ button#hide {
   width: 60px;
   height: 60px;
   position: absolute;
-  left: 40%;
-  top: 50%;
+  left: 60%;
   animation: spin 2s linear infinite;
 }
 

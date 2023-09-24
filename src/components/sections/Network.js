@@ -47,7 +47,7 @@ const About = () => {
 
     setTimeout(() => {
       isLoading(false)
-    }, 1000);
+    }, 10000);
   }
 
   const handleGoBack = () => {

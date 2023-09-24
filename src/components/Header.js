@@ -122,9 +122,9 @@ const Header = () => {
         {/* MENU ENDS */}
         {/* FREELANCE STARTS */}
         <div className="mail">
-          <p>
+          {email ? <p>
             Ref Code :<span onClick={handleCopy}> {refferalCode} </span>
-          </p>
+          </p> : ""}
           {email ? <span id="log-out" onClick={handleLogout}>
             Logout
           </span> : <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>}
@@ -179,8 +179,8 @@ const Header = () => {
             </li>
             <li>
               {email ? <p>
-                  Ref Code :<span onClick={handleCopy}> {refferalCode} </span>
-                </p> : ""}
+                Ref Code :<span onClick={handleCopy}> {refferalCode} </span>
+              </p> : ""}
 
             </li>
             <li>
