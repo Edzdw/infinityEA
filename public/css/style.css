@@ -2896,6 +2896,14 @@ button#hide {
     line-height: 35px;
   }
 
+  .network-title {
+    display: none;
+  }
+
+  .network-main-content {
+    width: 100%;
+  }
+
   .copyright {
     padding: 20px 0 30px;
   }
