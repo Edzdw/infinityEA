@@ -76,28 +76,28 @@ const About = () => {
       </div>
       {/* TITLE ENDS */}
 
-        <div className="network-main-content">
-          <h3 className = "network-title"> Danh sách Partner </h3>
-          {currentRoot !== email ? <button id= "hide" onClick={handleGoBack}>-</button> : ""}
-          <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-            {networks.length === 0 ? (
-              <span>Không có F1</span>
-            ) : (
-              networks.map((item, index) => (
-                
-                <li class ="ref-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
-                  
-                  {item.email}
-                  <button id = "show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button> 
+      <div className="network-main-content">
+        <h3 className="network-title"> Danh sách Partner </h3>
+        {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""}
+        <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+          {networks.length === 0 ? (
+            <span>Không có F1</span>
+          ) : (
+            networks.map((item, index) => (
 
-                </li>
-              ))
-            )}
-          </ul>
-        </div>
+              <li className="ref-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
+
+                {item.email}
+                <button id="show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button>
+
+              </li>
+            ))
+          )}
+        </ul>
+      </div>
 
 
-      </section>
-    );
-  };
-  export default About;
+    </section>
+  );
+};
+export default About;

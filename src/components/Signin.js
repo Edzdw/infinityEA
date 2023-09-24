@@ -56,7 +56,7 @@ function Signin({ isOpen, toggle }) {
         }
       })
       .catch((error) => {
-        normalAlert("Email hoặc mật khẩu không chính xác, xin vui lòng thử lại!", "error");
+        normalAlert("Email và mật khẩu không hợp lệ!", "error");
       });
   }
 

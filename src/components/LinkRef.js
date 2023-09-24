@@ -28,10 +28,10 @@ function LinkRef({ isOpen, toggle, current }) {
       method: 'post',
       maxBodyLength: Infinity,
       url: 'https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/update-ref',
-      headers: { 
+      headers: {
         'Content-Type': 'application/json'
       },
-      data : data
+      data: data
     };
 
     Axios.request(config)
@@ -41,18 +41,18 @@ function LinkRef({ isOpen, toggle, current }) {
           setTimeout(() => {
             window.location.reload();
           }, 1500);
-        } else if (response.data.status === 404) {
+        }
+      }).catch((error) => {
+        if (error.response.status === 404) {
           normalAlert("ID người giới thiệu không tồn tại!", "error");
         } else {
           normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+          localStorage.clear();
+          setTimeout(() => {
+            window.location.reload();
+          }, 1500);
+          return;
         }
-      }).catch((error) => {
-        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
-        localStorage.clear();
-        setTimeout(() => {
-          window.location.reload();
-        }, 1500);
-        return;
       });
   }
 
