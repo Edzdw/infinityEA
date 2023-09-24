@@ -2904,6 +2904,10 @@ button#hide {
     width: 100%;
   }
 
+  .ref-items {
+    margin: 0 10px;
+  }
+
   .copyright {
     padding: 20px 0 30px;
   }
