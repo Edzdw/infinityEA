@@ -178,6 +178,12 @@ const Header = () => {
               </a> : ""}
             </li>
             <li>
+              {email ? <p>
+                  Ref Code :<span onClick={handleCopy}> {refferalCode} </span>
+                </p> : ""}
+
+            </li>
+            <li>
               {email ? <a href="#"><span onClick={handleLogout}>Logout</span></a> : ""}
             </li>
           </ul>

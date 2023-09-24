@@ -7,7 +7,7 @@ const About = () => {
   const [networks, setNetworks] = React.useState([]);
   const [currentRoot, setCurrentRoot] = React.useState("");
   const [prevRoot, setPrevRoot] = React.useState([]);
-
+  const [loading, isLoading] = React.useState(false);
 
 
   React.useEffect(() => {
@@ -33,6 +33,7 @@ const About = () => {
 
     Axios.request(config)
       .then((response) => {
+        isLoading(true);
         setNetworks(response.data);
       })
       .catch((error) => {
@@ -43,6 +44,10 @@ const About = () => {
         }, 1500);
         return;
       });
+
+    setTimeout(() => {
+      isLoading(false)
+    }, 1000);
   }
 
   const handleGoBack = () => {
@@ -76,24 +81,28 @@ const About = () => {
       </div>
       {/* TITLE ENDS */}
 
-      <div className="network-main-content">
+      <div className="network-main-content text-center">
         <h3 className="network-title"> Danh sách Partner </h3>
-        {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""}
-        <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-          {networks.length === 0 ? (
-            <span>Không có F1</span>
-          ) : (
-            networks.map((item, index) => (
 
-              <li className="ref-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
+        {loading ? <div className="loader"></div> : (
+          <>
+            {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""}
+            <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+              {networks.length === 0 ? (
+                <span>Không có F1</span>
+              ) : (
+                networks.map((item, index) => (
 
-                {item.email}
-                <button id="show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button>
+                  <li className="ref-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
 
-              </li>
-            ))
-          )}
-        </ul>
+                    {item.email}
+                    <button id="show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button>
+
+                  </li>
+                ))
+              )}
+            </ul>
+          </>)}
       </div>
 
 
