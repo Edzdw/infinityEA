@@ -66,12 +66,13 @@ function Signin({ isOpen, toggle }) {
   
     if(password.type === "password"){
       password.type = "text";
-
-
+      btn.classList.remove("fa-eye-slash");
+      btn.classList.add("fa-eye");
     }
     else{
       password.type = "password";
-
+      btn.classList.remove("fa-eye");
+      btn.classList.add("fa-eye-slash");
     }
   }
 
@@ -106,12 +107,13 @@ function Signin({ isOpen, toggle }) {
               />
           </div>
 
-          <div className = "form-group">
+          <div id = "container" className = "form-group">
             <input className ="form-field" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
             />
+            <i class="fa fa-eye-slash" id="btn" onclick="togglePassword()"></i>
             <span id="btn" onclick={togglePassword} > Password </span>
 
           </div>
