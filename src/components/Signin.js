@@ -114,7 +114,6 @@ function Signin({ isOpen, toggle }) {
               }}
             />
 
-          <i class="fa fa-eye-slash" id="btn" onclick={togglePassword}></i>
             <span> Password </span>
 
           </div>
