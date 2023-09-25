@@ -66,13 +66,11 @@ function Signin({ isOpen, toggle }) {
   
     if(password.type === "password"){
       password.type = "text";
-      btn.classList.remove("fa-eye-slash");
-      btn.classList.add("fa-eye");
+
     }
     else{
       password.type = "password";
-      btn.classList.remove("fa-eye");
-      btn.classList.add("fa-eye-slash");
+
     }
   }
 
@@ -114,7 +112,7 @@ function Signin({ isOpen, toggle }) {
               }}
             />
 
-            <span> Password </span>
+            <span id="btn" onClick={togglePassword}> Password </span>
 
           </div>
 
