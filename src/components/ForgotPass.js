@@ -110,7 +110,7 @@ function ForgotPass({ isOpen, toggle, success }) {
                 </div>
                 <ModalBody style={{ color: "black", display: "flex", flexDirection: "column", gap: "10px" }}>
                     <div className="form-group">
-                        <span style={{ width: "175px" }}> Email </span>
+                        <span style={{ width: "210" }}> Email </span>
                         <input className="form-field" type="email" id="email" placeholder="Nhập email..." value={email} style={{ width: "100%" }}
                             onChange={(e) => {
                                 setEmail(e.target.value);
