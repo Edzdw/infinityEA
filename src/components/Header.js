@@ -9,6 +9,7 @@ const Header = () => {
   const [isSignInModalOpen, setIsSignInModalOpen] = React.useState(false);
   const [isLinkRefModalOpen, setIsLinkRefModalOpen] = React.useState(false);
   const [isAddExnessModalOpen, setIsAddExnessModalOpen] = React.useState(false);
+  const [refferalCode, setRefferalCode] = React.useState(0);
 
   const [email, setEmail] = React.useState("");
 
@@ -41,7 +42,7 @@ const Header = () => {
 
     let config = {
       method: 'post',
-      url: 'https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/check-ref',
+      url: 'https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/get-info',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -50,14 +51,18 @@ const Header = () => {
 
     Axios.request(config)
       .then((response) => {
-        if (response == "ok") {
-          if (response.data == 1) {
-            toggleLinkRefModal();
-          }
+        if (response.data.isRefferal == 1) {
+          toggleLinkRefModal();
         }
+        setRefferalCode(response.data.refCode);
       }).catch(error => {
-        console.log("error", error);
-        localStorage.clear();
+        if (error.response.status === 404) {
+          normalAlert("Email: " + email + " không tồn tại!", "error");
+        } else {
+          console.log("error", error);
+          normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
+          localStorage.clear();
+        }
       });
   }, [email]);
 
@@ -68,6 +73,17 @@ const Header = () => {
       window.location.reload();
     }, 1500);
   }
+
+  const handleCopy = () => {
+    if (refferalCode) {
+      navigator.clipboard.writeText(refferalCode)
+        .then(function () {
+          normalAlert("Mã giới thiệu đã được copy!", "success");
+        });
+    } else {
+      return;
+    }
+  };
 
   return (
     <header>
@@ -106,12 +122,12 @@ const Header = () => {
         {/* MENU ENDS */}
         {/* FREELANCE STARTS */}
         <div className="mail">
-          <p>
-            Email :<span> finance101@alexgroup.vn </span>
-          </p>
-          {email ? <span id ="log-out" className = "log-btn" onClick={handleLogout}>
-              Logout
-          </span> : <span id="sign-in" classname = "log-btn" onClick={toggleSignInModal}>Sign In</span>}
+          {email ? <p>
+            Ref Code :<span onClick={handleCopy}> {refferalCode} </span>
+          </p> : ""}
+          {email ? <span id="log-out" onClick={handleLogout}>
+            Logout
+          </span> : <span id="sign-in" onClick={toggleSignInModal}>Sign In</span>}
         </div>
         {/* FREELANCE ENDS */}
       </div>
@@ -162,6 +178,12 @@ const Header = () => {
               </a> : ""}
             </li>
             <li>
+              {email ? <p>
+                Ref Code :<span onClick={handleCopy}> {refferalCode} </span>
+              </p> : ""}
+
+            </li>
+            <li>
               {email ? <a href="#"><span onClick={handleLogout}>Logout</span></a> : ""}
             </li>
           </ul>
@@ -172,7 +194,7 @@ const Header = () => {
 
       <LinkRef isOpen={isLinkRefModalOpen} toggle={toggleLinkRefModal} current={email} />
 
-      {isAddExnessModalOpen && <Exness isOpen={isAddExnessModalOpen} toggle={toggleAddExnessModal} success={toggleAddExnessModal}/>}
+      {isAddExnessModalOpen && <Exness isOpen={isAddExnessModalOpen} toggle={toggleAddExnessModal} success={toggleAddExnessModal} />}
     </header>
   );
 };

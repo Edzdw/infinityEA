@@ -7,7 +7,7 @@ const About = () => {
   const [networks, setNetworks] = React.useState([]);
   const [currentRoot, setCurrentRoot] = React.useState("");
   const [prevRoot, setPrevRoot] = React.useState([]);
-
+  const [loading, isLoading] = React.useState(false);
 
 
   React.useEffect(() => {
@@ -26,6 +26,7 @@ const About = () => {
   }, []);
 
   const fetchNetwork = (input) => {
+    isLoading(true);
     let config = {
       method: 'get',
       url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/getNetwork/${encodeURI(input)}`
@@ -43,6 +44,10 @@ const About = () => {
         }, 1500);
         return;
       });
+
+    setTimeout(() => {
+      isLoading(false)
+    }, 700);
   }
 
   const handleGoBack = () => {
@@ -68,7 +73,7 @@ const About = () => {
         <h3>
           <span>
             <span className="animated-layer fade-in-left-animation fadeInUp wow">
-              Our Network
+              Network
             </span>
           </span>
         </h3>
@@ -76,6 +81,7 @@ const About = () => {
       </div>
       {/* TITLE ENDS */}
 
+<<<<<<< HEAD
       <div className="main-content">
         {currentRoot !== email ? <button onClick={handleGoBack}>Quay lại</button> : ""}
         <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
@@ -89,13 +95,33 @@ const About = () => {
             ))
           )}
         </ul>
+=======
+      <div className="network-main-content text-center">
+        <h3 className="network-title"> Danh sách Partner </h3>
+
+        {loading ? <div className="loader"></div> : (
+          <>
+            {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""}
+            <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+              {networks.length === 0 ? (
+                <span>Không có F1</span>
+              ) : (
+                networks.map((item, index) => (
+
+                  <li className="ref-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
+
+                    {item.email}
+                    <button id="show" onClick={() => { handleShowNext(item.email, item.referrer) }}> + </button>
+
+                  </li>
+                ))
+              )}
+            </ul>
+          </>)}
+>>>>>>> f3539067da6e4ad40baa671b1d619713ee8389d5
       </div>
 
-      <img
-        alt=""
-        className="separator hide-mobile"
-        src="assets/separator.png"
-      />
+
     </section>
   );
 };

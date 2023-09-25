@@ -50,18 +50,17 @@ function Signup({ isOpen, toggle }) {
           setTimeout(() => {
             window.location.reload();
           }, 1500);
-        } else if (error.response.status == 403) {
+        } else if (response.status === 226) {
           normalAlert("Email đã tồn tại trong hệ thống, vui lòng thử lại!", "error");
-        } else if (error.response.status == 402) {
+        }
+      })
+      .catch(error => {
+        if (error.response.status === 404) {
           normalAlert("Người giới thiệu không tồn tại trong hệ thống, vui lòng thử lại!", "error");
         } else {
           normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
         }
-      })
-      .catch((error) => {
-        normalAlert("Có lỗi xảy ra, vui lòng thử lại sau!", "error");
       });
-
   }
 
   function isValidEmail(email) {

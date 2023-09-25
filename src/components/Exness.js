@@ -64,7 +64,7 @@ function Exness({ isOpen, toggle, success }) {
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/update-exness',
+      url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/update-exness`,
       headers: {
         'Content-Type': 'application/json'
       },
@@ -73,12 +73,13 @@ function Exness({ isOpen, toggle, success }) {
 
     Axios.request(config)
       .then((response) => {
-        if (response.data.message === "Exness ID cập nhật thành công cho user: " + email) {
+        console.log(response.status);
+        if (response.status === 200) {
           normalAlert("Thêm Exness ID thành công!", "success");
           setTimeout(() => {
             window.location.reload();
           }, 1500);
-        } else if (response.data.message === "Exness ID này đã tồn tại.") {
+        } else if (response.status === 226) {
           normalAlert("Exness ID này đã được thêm vào hệ thống!", "error");
         }
       })
