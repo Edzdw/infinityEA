@@ -107,13 +107,13 @@ function Signin({ isOpen, toggle }) {
               />
           </div>
 
-          <div id = "container" className = "form-group">
+          <div className = "form-group">
             <input className ="form-field" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
             />
-            <i class="fa fa-eye-slash" id="btn" onclick="togglePassword()"></i>
+            <i class="fa fa-eye-slash" id="btn" onclick={togglePassword}></i>
             <span id="btn" onclick={togglePassword} > Password </span>
 
           </div>
