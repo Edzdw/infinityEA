@@ -60,6 +60,23 @@ function Signin({ isOpen, toggle }) {
       });
   }
 
+  function togglePassword(){
+    const btn = document.getElementById("btn");
+    var password = document.getElementById("password");
+  
+    if(password.type === "password"){
+      password.type = "text";
+      btn.classList.remove("fa-eye-slash");
+      btn.classList.add("fa-eye");
+    }
+    else{
+      password.type = "password";
+      btn.classList.remove("fa-eye");
+      btn.classList.add("fa-eye-slash");
+    }
+  }
+
+  
   function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailRegex.test(email);
@@ -96,6 +113,8 @@ function Signin({ isOpen, toggle }) {
                 setPassword(e.target.value);
               }}
             />
+
+          <i class="fa fa-eye-slash" id="btn" onclick="togglePassword()"></i>
             <span> Password </span>
 
           </div>
