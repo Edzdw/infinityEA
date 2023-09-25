@@ -2055,6 +2055,16 @@ header .mobile-menu {
   margin: 0 120px;
 }
 
+ul.current-ref-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+
 .network-title {
   text-align: center;
   font-size: 36px;
@@ -2078,6 +2088,7 @@ header .mobile-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2% 10%;
 }
 
 button#show {
@@ -2093,7 +2104,7 @@ button#hide {
 }
 
 
-/* NETWORD-SECTION */
+
 
 
 
