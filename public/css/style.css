@@ -2052,6 +2052,7 @@ header .mobile-menu {
 .network-main-content {
   width: 538px;
   height: 60%;
+  margin: 0 120px;
 }
 
 .network-title {
@@ -2078,7 +2079,6 @@ header .mobile-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 120px;
 }
 
 button#show {
