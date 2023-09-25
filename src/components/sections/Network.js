@@ -83,10 +83,15 @@ const About = () => {
 
       <div className="network-main-content text-center">
         <h3 className="network-title"> Danh sách Partner </h3>
-        <span> {">"}{currentRoot} </span>
+        <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+          <li class = "current-ref-items"> {">"} {currentRoot} </li>
+          <li> {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""} </li>
+
+        </ul>
+
+
         {loading ? <div className="loader"></div> : (
           <>
-            {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""}
             <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
               {networks.length === 0 ? (
                 <span>Không có F1</span>
