@@ -116,7 +116,7 @@ function ForgotPass({ isOpen, toggle, success }) {
                                 setEmail(e.target.value);
                             }}
                         />
-                        <Button onClick={handleGetCode} value="Get Code"> Get code </Button>
+                        <Button id = "confirm-btn" onClick={handleGetCode} value="Get Code"> Confirm </Button>
                     </div>
 
                     <div className="form-group">

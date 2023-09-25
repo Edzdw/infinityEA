@@ -177,6 +177,18 @@ ul {
   transition: all 0.8s ease 0s;
 }
 
+
+#confirm-btn {
+    color: #fff;
+    background-color: black;
+    border-color: #6c757d;
+}
+
+#confirm-btn:hover {
+    background-color: var(--text-color);
+}
+
+
 .line:before {
   content: "";
   position: absolute;
