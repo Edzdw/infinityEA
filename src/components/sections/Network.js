@@ -26,6 +26,7 @@ const About = () => {
   }, []);
 
   const fetchNetwork = (input) => {
+    isLoading(true);
     let config = {
       method: 'get',
       url: `https://jellyfish-app-kafzn.ondigitalocean.app/api/v1/auth/getNetwork/${encodeURI(input)}`
@@ -33,7 +34,6 @@ const About = () => {
 
     Axios.request(config)
       .then((response) => {
-        isLoading(true);
         setNetworks(response.data);
       })
       .catch((error) => {
