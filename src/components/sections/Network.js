@@ -83,7 +83,7 @@ const About = () => {
 
       <div className="network-main-content text-center">
         <h3 className="network-title"> Danh sách Partner </h3>
-        <span> {currentRoot}</span>
+        <span> {">"}{currentRoot} </span>
         {loading ? <div className="loader"></div> : (
           <>
             {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""}
