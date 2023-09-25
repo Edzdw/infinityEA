@@ -77,7 +77,6 @@ const About = () => {
       {/* TITLE ENDS */}
 
       <div className="main-content">
-        <h3 className = "main-content-title"> Danh sách Partner </h3>
         {currentRoot !== email ? <button onClick={handleGoBack}>Quay lại</button> : ""}
         <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
           {networks.length === 0 ? (
