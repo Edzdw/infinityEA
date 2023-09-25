@@ -47,7 +47,7 @@ const About = () => {
 
     setTimeout(() => {
       isLoading(false)
-    }, 700);
+    }, 1500);
   }
 
   const handleGoBack = () => {
@@ -83,7 +83,7 @@ const About = () => {
 
       <div className="network-main-content text-center">
         <h3 className="network-title"> Danh sách Partner </h3>
-        <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+        <ul class ="current-ref-container" style={{ listStyleType: "none", paddingLeft: 0 }}>
           <li class = "current-ref-items"> {">"} {currentRoot} </li>
           <li> {currentRoot !== email ? <button id="hide" onClick={handleGoBack}>-</button> : ""} </li>
 
