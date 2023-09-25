@@ -81,21 +81,6 @@ const About = () => {
       </div>
       {/* TITLE ENDS */}
 
-<<<<<<< HEAD
-      <div className="main-content">
-        {currentRoot !== email ? <button onClick={handleGoBack}>Quay lại</button> : ""}
-        <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-          {networks.length === 0 ? (
-            <span>Không có F1</span>
-          ) : (
-            networks.map((item, index) => (
-              <li class ="network-items" key={index} onClick={() => { handleShowNext(item.email, item.referrer) }}>
-                {item.email}
-              </li>
-            ))
-          )}
-        </ul>
-=======
       <div className="network-main-content text-center">
         <h3 className="network-title"> Danh sách Partner </h3>
 
@@ -118,7 +103,6 @@ const About = () => {
               )}
             </ul>
           </>)}
->>>>>>> f3539067da6e4ad40baa671b1d619713ee8389d5
       </div>
 
 
