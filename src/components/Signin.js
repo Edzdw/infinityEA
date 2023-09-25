@@ -60,17 +60,6 @@ function Signin({ isOpen, toggle }) {
       });
   }
 
-  function togglePassword(){
-    const btn = document.getElementById("btn");
-    var password = document.getElementById("password");
-  
-    if(password.type === "password"){
-      password.type = "text";
-    }
-    else{
-      password.type = "password";
-    }
-  }
 
   
   function isValidEmail(email) {
@@ -103,15 +92,25 @@ function Signin({ isOpen, toggle }) {
               />
           </div>
 
-          <div className = "form-group">
+          <div id ="label" className = "form-group">
             <input className ="form-field" type="password" id="password" placeholder="Nhập mật khẩu..." value={password} style={{ width: "100%" }}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
             />
-            <span id="btn" onclick={togglePassword} > Password </span>
+            <span> Password </span>
+
+            <div class="password-icon">
+              <i data-feather="eye"></i>
+              <i data-feather="eye-off"></i>
+            </div>
 
           </div>
+
+          <script src="https://unpkg.com/feather-icons"></script>
+          <script>
+              feather.replace();
+          </script>
 
           <Button color="primary" type="button" onClick={handleSignin}>
              <span> Sign In </span>
