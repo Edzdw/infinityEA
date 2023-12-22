@@ -17,7 +17,7 @@
 
 #switcher,
 #showSwitcher {
-  transition: 1s all;
+  transition: .5s;
 }
 #switcher.open,
 #showSwitcher.open {
